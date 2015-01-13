@@ -28,6 +28,13 @@ Options
   
 * `-d <number>`: Generate a feed for the past _<number>_ days.
 
+  Setting this value high enough for one run may give you all feed
+  entries you missed since 8th of June 2014.
+
+  But remember to do this only once as it fetches every page for every
+  day since then per run to get the comic title for that day. You may
+  get banned if you do that too often.
+
 Requirements
 ------------
 
