@@ -28,6 +28,18 @@ Options
   
 * `-d <number>`: Generate a feed for the past _<number>_ days.
 
+Requirements
+------------
+
+Besides modules from the Perl core distribution, the following Perl
+module are required and can be found at least on CPAN as well as
+packages on Debian:
+
+* [POSIX::strftime::Compiler](https://metacpan.org/release/POSIX-strftime-Compiler)
+* [Date::Calc](https://metacpan.org/release/Date-Calc)
+* [LWP::UserAgent](https://metacpan.org/pod/LWP::UserAgent) from the
+  [libwww-perl](https://metacpan.org/release/libwww-perl) distribution
+
 License
 -------
 
