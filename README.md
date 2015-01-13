@@ -39,8 +39,9 @@ Requirements
 ------------
 
 Besides modules from the Perl core distribution, the following Perl
-module are required and can be found at least on CPAN as well as
-packages on Debian:
+module are required. They can be found on e.g.
+[https://metacpan.org/](CPAN) or as packages in e.g.
+[Debian](https://www.debian.org/).
 
 * [POSIX::strftime::Compiler](https://metacpan.org/release/POSIX-strftime-Compiler)
 * [Date::Calc](https://metacpan.org/release/Date-Calc)
