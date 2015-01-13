@@ -53,5 +53,5 @@ License
 Copyright (C) 2015 Axel Beckert
 
 Licensed under the _DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE_. See
-the file LICENSE or http://www.wtfpl.net/txt/copying/ for the full
+the file [LICENSE](LICENSE) or http://www.wtfpl.net/txt/copying/ for the full
 license text.
