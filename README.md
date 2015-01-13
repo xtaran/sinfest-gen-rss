@@ -14,7 +14,7 @@ Usage
 By default it generates an RSS feed for the past 7 days and fetches
 all titles from the website for that.
 
-# Liferea
+### Liferea
 
 The script can be used as command-type source in
 [Liferea](http://liferea.sf.net/). Actually it was written for exactly
