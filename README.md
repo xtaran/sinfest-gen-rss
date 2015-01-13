@@ -40,7 +40,7 @@ Requirements
 
 Besides modules from the Perl core distribution, the following Perl
 module are required. They can be found on e.g.
-[https://metacpan.org/](CPAN) or as packages in e.g.
+[CPAN](https://metacpan.org/) or as packages in e.g.
 [Debian](https://www.debian.org/).
 
 * [POSIX::strftime::Compiler](https://metacpan.org/release/POSIX-strftime-Compiler)
