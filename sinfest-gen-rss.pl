@@ -106,6 +106,7 @@ sub output_item {
                 <item>
                         <title>"$title" - $pubdate</title>
                         <link>$page_url</link>
+                        <guid>$page_url</guid>
                         <pubDate>$pubdate 00:00:00 -04:00</pubDate>
                         <description>&lt;img src="$img_url" border="0" alt="$title" /&gt;</description>
                 </item>
