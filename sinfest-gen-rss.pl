@@ -17,7 +17,7 @@ use strict;
 use warnings;
 use 5.010;
 
-my $VERSION = 0.01;
+our $VERSION = 0.01;
 
 # Configuration
 my $number_of_entries = 7;
