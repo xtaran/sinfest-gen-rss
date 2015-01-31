@@ -112,4 +112,5 @@ sub output_item {
                         <description>&lt;img src="$img_url" border="0" alt="$title" /&gt;</description>
                 </item>
 EOT
+    return;
 }
