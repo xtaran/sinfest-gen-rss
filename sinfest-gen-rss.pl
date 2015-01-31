@@ -95,7 +95,7 @@ sub output_item {
         my $response = $ua->get($page_url);
         if ($response->is_success) {
             my $content = $response->decoded_content;
-            if ($content =~ m(<img src="btphp/comics/\d{4}-\d{2}-\d{2}\.gif" alt="([^"]*)">)) {
+            if ($content =~ m{<img src="btphp/comics/\d{4}-\d{2}-\d{2}\.gif" alt="([^"]*)">}) {
                 $title = $1;
             }
         }
