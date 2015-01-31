@@ -28,6 +28,7 @@ my $img_template = 'http://www.sinfest.net/btphp/comics/%F.gif';
 local $ENV{TZ} = 'AST4ADT';
 
 # Libraries
+use Carp;
 use POSIX::strftime::Compiler qw(strftime);
 use Date::Calc qw(Add_Delta_Days Date_to_Time Time_to_Date Mktime);
 use Getopt::Std;
@@ -99,7 +100,7 @@ sub output_item {
             }
         }
         else {
-            warn "$page_url gave ".$response->status_line;
+            carp "$page_url gave ".$response->status_line;
         }
     }
 
