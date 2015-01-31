@@ -25,7 +25,7 @@ my $timeout = 3;
 # %F = %Y-%m-%d = ISO 8601
 my $url_template = 'http://www.sinfest.net/view.php?date=%F';
 my $img_template = 'http://www.sinfest.net/btphp/comics/%F.gif';
-$ENV{TZ} = 'AST4ADT';
+local $ENV{TZ} = 'AST4ADT';
 
 # Libraries
 use POSIX::strftime::Compiler qw(strftime);
