@@ -14,11 +14,16 @@ Usage
 By default it generates an RSS feed for the past 7 days and fetches
 all titles from the website for that.
 
-### Liferea
+### Plugin for Liferea and Snownews
 
 The script can be used as command-type source in
-[Liferea](http://liferea.sf.net/). Actually it was written for exactly
-that purpose.
+[Liferea](http://liferea.sf.net/), as
+['Execurl'](http://snownews.kcore.de/snowscripts/) type plugin in
+[Snownews](http://snownews.kcore.de/), or in any other RSS feed reader
+with the capability to call an feed-generating program instead of an
+URL.
+
+Actually it was written for exactly that purpose. I use it with Liferea.
 
 Options
 -------
