@@ -5,8 +5,8 @@ This is a Perl written replacement for the
 [broken/stale RSS feed](http://www.sinfest.net/rss.php) of the
 daily webcomic [Sinfest](http://www.sinfest.net/).
 
-Their RSS feed is stale since their site got a new design around the
-8th of June 2014.
+Their RSS feed is stale since their site got a
+[new design around the 8th of June 2014](http://www.sinfest.net/news.php).
 
 Usage
 -----
