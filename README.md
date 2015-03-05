@@ -61,3 +61,9 @@ Copyright (C) 2015 Axel Beckert
 Licensed under the _DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE_. See
 the file [LICENSE](LICENSE) or http://www.wtfpl.net/txt/copying/ for the full
 license text.
+
+Ideas
+-----
+
+* It maybe a nice feature to also support a CGI mode. If so, it should
+  be possible to run it without CGI.pm installed.
