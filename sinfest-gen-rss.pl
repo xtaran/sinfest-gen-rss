@@ -24,7 +24,7 @@ my $number_of_entries = 7;
 my $timeout = 3;
 # %F = %Y-%m-%d = ISO 8601
 my $url_template = 'http://www.sinfest.net/view.php?date=%F';
-my $img_template = 'http://www.sinfest.net/btphp/comics/%F.gif';
+my $img_template = 'http://www.sinfest.net/btphp/comics/%F.jpg';
 local $ENV{TZ} = 'AST4ADT';
 
 # Libraries
@@ -95,7 +95,7 @@ sub output_item {
         my $response = $ua->get($page_url);
         if ($response->is_success) {
             my $content = $response->decoded_content;
-            if ($content =~ m{<img src="btphp/comics/\d{4}-\d{2}-\d{2}\.gif" alt="([^"]*)">}) {
+            if ($content =~ m{<img src="btphp/comics/\d{4}-\d{2}-\d{2}\.jpg" alt="([^"]*)">}) {
                 $title = $1;
             }
         }
