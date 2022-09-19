@@ -25,7 +25,7 @@ my $timeout = 3;
 # %F = %Y-%m-%d = ISO 8601
 my $base_url = 'https://www.sinfest.xyz/';
 my $url_template = $base_url . 'view.php?date=%F';
-my $img_template = $base_url . 'btphp/comics/%F.jpg';
+my $img_template = $base_url . 'btphp/comics/%F.jpg'; # Changed from .gif to .jpg on 2021-05-23.jpg
 my $favicon_url = $base_url . 'favicon.ico';
 local $ENV{TZ} = 'AST4ADT';
 
@@ -89,7 +89,7 @@ sub output_item {
     my @ymd = @_;
     my @localtime = localtime(Date_to_Time(@ymd,@ymdhms[3..5]));
     my $page_url = strftime($url_template,  @localtime);
-    my $img_url  = strftime($img_template,  @localtime); # A good default
+    my $img_url  = strftime($img_template,  @localtime);
     my $pubdate  = strftime('%a, %d %b %Y', @localtime);
 
     my $title = 'Dummy';
