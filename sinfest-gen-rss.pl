@@ -23,8 +23,10 @@ our $VERSION = 0.02;
 my $number_of_entries = 7;
 my $timeout = 3;
 # %F = %Y-%m-%d = ISO 8601
-my $url_template = 'http://www.sinfest.net/view.php?date=%F';
-my $img_template = 'http://www.sinfest.net/btphp/comics/%F.jpg';
+my $base_url = 'https://www.sinfest.xyz/';
+my $url_template = $base_url . 'view.php?date=%F';
+my $img_template = $base_url . 'btphp/comics/%F.jpg'; # Changed from .gif to .jpg on 2021-05-23.jpg
+my $favicon_url = $base_url . 'favicon.ico';
 local $ENV{TZ} = 'AST4ADT';
 
 # Libraries
@@ -49,7 +51,7 @@ my $ua = LWP::UserAgent->new;
 $ua->timeout($timeout);
 $ua->env_proxy;
 $ua->agent("sinfest-gen-rss/$VERSION ".$ua->_agent
-           #." http://github.com/xtaran/sinfest-gen-rss"
+           #." https://github.com/xtaran/sinfest-gen-rss"
     );
 
 # Output RSS header
@@ -59,14 +61,14 @@ print <<"EOT";
 <rss version="0.92">
         <channel>
                 <title>Sinfest</title>
-                <link>http://www.sinfest.net</link>
+                <link>$base_url</link>
                 <description>Sinfest</description>
                 <lastBuildDate>$now</lastBuildDate>
                 <copyright></copyright>
                 <image>
                         <title>Sinfest</title>
-                        <url>http://www.sinfest.net/rssicon.png</url>
-                        <link>http://www.sinfest.net</link>
+                        <url>$favicon_url</url>
+                        <link>$base_url</link>
                         <width>28</width>
                         <height>30</height>
                 </image>
@@ -95,8 +97,9 @@ sub output_item {
         my $response = $ua->get($page_url);
         if ($response->is_success) {
             my $content = $response->decoded_content;
-            if ($content =~ m{<img src="btphp/comics/\d{4}-\d{2}-\d{2}\.jpg" alt="([^"]*)">}) {
-                $title = $1;
+            if ($content =~ m{<img src="(btphp/comics/.*?\.(jpg|gif|png))" alt="(.*?)"}) {
+                $img_url = $base_url . $1;
+                $title = $3;
             }
         }
         else {
